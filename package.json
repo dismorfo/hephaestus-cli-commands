@@ -1,0 +1,26 @@
+{
+  "name": "hephaestus-cli-commands",
+  "description": "Hephaestus CLI commands",
+  "version": "2.0.0",
+  "author": "Alberto Ortiz Flores <dismorfo@gmail.com>",
+  "contributors": [
+    "Alberto Ortiz Flores <dismorfo@gmail.com>"
+  ],
+  "keywords": [
+    "hephaestus"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dismorfo/hephaestus-cli-commands"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "main": "index.js",
+  "preferGlobal": false,
+  "engines": {
+    "node": ">= 8.0"
+  },
+  "os": [
+    "!win32"
+  ]
+}
