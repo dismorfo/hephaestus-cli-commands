@@ -1,7 +1,7 @@
 'use strict'
 const Commands = class {
   constructor (program) {
-    this.version = '2.0.0'
+    this.version = '2.0.1'
     this.name = 'agartha-cli-commands'
     try {
       const agartha = process.agartha
@@ -27,6 +27,11 @@ const Commands = class {
                   process.agartha._onDone.push({ action: subcommand.action, command: subcommand.command})
                 }
               }
+              if (agartha._.isBoolean(subcommand.onForge)) {
+                if (subcommand.onForge) {
+                  process.agartha._onForge.push({ action: subcommand.action, command: subcommand.command})
+                }
+              }              
               program.command(subcommand.command)
                 .description(subcommand.description)
                 .alias(subcommand.alias)
