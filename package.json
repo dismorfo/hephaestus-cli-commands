@@ -14,7 +14,14 @@
     "url": "git+https://github.com/dismorfo/hephaestus-cli-commands"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "adm-zip": "^0.4.13",
+    "ncp": "^2.0.0",
+    "node-cleanup": "^2.1.2",
+    "request": "^2.88.0",
+    "rimraf": "^2.6.2",
+    "underscore": "^1.9.1"
+  },
   "main": "index.js",
   "preferGlobal": false,
   "engines": {
