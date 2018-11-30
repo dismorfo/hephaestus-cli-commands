@@ -20,7 +20,8 @@
     "node-cleanup": "^2.1.2",
     "request": "^2.88.0",
     "rimraf": "^2.6.2",
-    "underscore": "^1.9.1"
+    "underscore": "^1.9.1",
+    "valid-url": "^1.0.9"
   },
   "main": "index.js",
   "preferGlobal": false,
