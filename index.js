@@ -19,7 +19,7 @@ exports = module.exports = class HephaestusCommands {
               const subcommand = new SubCommand();
               subcommand.options.forEach((option) => {
                 program.option(option.flag, option.description);
-              })
+              });
               if (agartha._.isBoolean(subcommand.onDone)) {
                 if (subcommand.onDone) {
                   process.agartha._onDone.push({ action: subcommand.action, command: subcommand.command});
@@ -29,13 +29,17 @@ exports = module.exports = class HephaestusCommands {
                 if (subcommand.onForge) {
                   process.agartha._onForge.push({ action: subcommand.action, command: subcommand.command});
                 }
-              }              
-              program.command(subcommand.command)
-                .description(subcommand.description)
-                .alias(subcommand.alias)
-                .action(subcommand.action);
               }
-            })
+              // register command
+              // .list = true or command was passed as argument
+              if (subcommand.list || (!subcommand.list && !agartha._.isUndefined(process.argv[2]) && process.argv[2] == subcommand.command)) {
+                program.command(subcommand.command)
+                  .description(subcommand.description)
+                  .alias(subcommand.alias)
+                  .action(subcommand.action);
+                }
+              }
+            });
           }
       })
       program.parse(process.argv);
