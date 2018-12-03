@@ -2,7 +2,7 @@
 
 exports = module.exports = class HephaestusCommands {
   constructor (program) {
-    const { agartha } = require('hephaestus');
+    const agartha = require('hephaestus');
     const pkg = require('./package.json');
     this.version = pkg.version;
     this.name = pkg.name;
