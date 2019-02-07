@@ -45,7 +45,7 @@ exports = module.exports = class HephaestusCommands {
       program.parse(process.argv);
     }
     catch (e) {
-      console.error('outer', e.message);
+      console.error(e)
     }
   }
 }
