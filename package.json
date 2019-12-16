@@ -1,7 +1,7 @@
 {
   "name": "hephaestus-cli-commands",
   "description": "Hephaestus CLI commands",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "author": "Alberto Ortiz Flores <dismorfo@gmail.com>",
   "contributors": [
     "Alberto Ortiz Flores <dismorfo@gmail.com>"
@@ -16,6 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "adm-zip": "^0.4.13",
+    "chalk": "^3.0.0",
     "ncp": "^2.0.0",
     "node-cleanup": "^2.1.2",
     "request": "^2.88.0",
